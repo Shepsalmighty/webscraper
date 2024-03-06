@@ -17,15 +17,14 @@ site_elements = soup.select('.js-click-tag.card-item__link.text-decoration--none
 
 
 def top3():
-    count = [1,2,3]
     site = []
     # while count <= 2 or site:
-    for num in count:
-        print(site_elements[num].text)
-        print(url + site_elements[num].attrs["href"] + "")
-        update = url + site_elements[num].attrs["href"] + ""
+    for _, element in zip(range(3), site_elements):
+        # print(site_elements[num].text)
+        # print(url + site_elements[num].attrs["href"] + "")
+        update = url + element.attrs["href"] + ""
         site.append(update)
-        # count +=1
+
     return site
 
 print(type(top3))
