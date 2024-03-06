@@ -11,18 +11,24 @@ res.raise_for_status()
 soup = BeautifulSoup(res.text, 'html.parser')
 
 site_elements = soup.select('.js-click-tag.card-item__link.text-decoration--none')
-# element_link = soup.select(f'a[href^={site_elements}')
 
-num_quotes = random.randint(0,4)
+
+# num_quotes = random.randint(0,4)
 
 
 def top3():
-    count = 0
-    while count <= 3:
-        print(site_elements[count].text)
-        print(url + site_elements[count].attrs["href"])
-        print("")
-        count +=1
+    count = [1,2,3]
+    site = []
+    # while count <= 2 or site:
+    for num in count:
+        print(site_elements[num].text)
+        print(url + site_elements[num].attrs["href"] + "")
+        update = url + site_elements[num].attrs["href"] + ""
+        site.append(update)
+        # count +=1
+    return site
+
+print(type(top3))
 top3()
 
 
