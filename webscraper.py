@@ -13,7 +13,7 @@ soup = BeautifulSoup(res.text, 'html.parser')
 site_elements = soup.select('.js-click-tag.card-item__link.text-decoration--none')
 
 
-# num_quotes = random.randint(0,4)
+
 
 
 def top3():
