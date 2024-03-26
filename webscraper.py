@@ -13,6 +13,7 @@ soup = BeautifulSoup(res.text, 'html.parser')
 site_elements = soup.select('.js-click-tag.card-item__link.text-decoration--none')
 
 
+# top 3 function grabs the first 3 articles (in our case the most popular therefore top)
 def top3():
     site = []
     # without zip, the code would fail/error out if we had less than 3 articles
