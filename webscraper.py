@@ -1,3 +1,4 @@
+#!/home/sheps/webscraper/.venv/bin/python
 import sys
 import requests
 import webbrowser

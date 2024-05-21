@@ -1,6 +1,11 @@
+#!/home/sheps/webscraper/.venv/bin/python
 import discord
 import webscraper
-from bot_token import bot_token
+import os
+
+
+bot_token = os.environ["DISCORD_TOKEN"]
+
 
 intents = discord.Intents.default()
 intents.message_content = True
