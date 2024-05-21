@@ -17,7 +17,9 @@ async def on_ready():
     channel = client.get_channel(1214656130882609152)
     links = webscraper.top3()
     await channel.send(links)
+    await client.close()
 
 
 
 client.run(bot_token)
+
